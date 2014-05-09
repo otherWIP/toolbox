@@ -19,4 +19,4 @@ or uninstall emonhub
     
 to test the start stop restart reload status deamon
 
-    ~/test-emonhub/deamon-test.sh
+    ~/test-emonhub/daemon-test.sh
