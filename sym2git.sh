@@ -10,6 +10,7 @@ GIT_PATH=`pwd`/emonhub
 
 ### clone emonhub
 git clone https://github.com/pb66/emonhub.git
+git clone https://github.com/emonhub/emonhub.git
 
 
 ### create folder and link for settings file (probally not used)
