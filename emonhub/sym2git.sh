@@ -6,7 +6,7 @@ INST_PATH=/usr/share/emonhub
 LOG_PATH=/var/log
 
 ### set git cloned location
-GIT_PATH=`pwd`/emonhub
+GIT_PATH=/home/pi/emonhub
 
 ### clone emonhub
 git clone https://github.com/pb66/emonhub.git
