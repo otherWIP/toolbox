@@ -2,7 +2,7 @@
 git clone https://github.com/pb66/emonhub.git
 #git clone https://github.com/emonhub/emonhub.git
 INST_PATH=/usr/share/emonhub
-LOG_PATH=/var/log/emonhub
+LOG_PATH=/var/log
 TEMP_PATH=`pwd`/emonhub
 echo
 echo "Installing emonHub................"
