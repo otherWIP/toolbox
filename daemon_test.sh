@@ -1,9 +1,37 @@
 #!/bin/sh
-echo "Executing 'sudo service emonhub stop' command"
+echo ""
+echo "sudo ps -ef | grep emonhub"
+sudo ps -ef | grep emonhub
+echo ""
+echo "sudo service emonhub"
+sudo service emonhub
+echo ""
+echo "sudo service emonhub status"
+sudo service emonhub status
+echo ""
+echo "sudo service emonhub stop"
 sudo service emonhub stop
-echo "Executing 'sudo service emonhub start' command"
+echo ""
+echo "sudo service emonhub start"
 sudo service emonhub start
-echo "Executing 'sudo service emonhub restart' command"
+echo ""
+echo "sudo service emonhub restart"
 sudo service emonhub restart
-echo "Executing 'sudo service emonhub stop' command"
+echo ""
+echo "sudo service emonhub stop"
 sudo service emonhub stop
+echo ""
+echo "sudo service emonhub restart"
+sudo service emonhub restart
+echo ""
+echo "sudo service emonhub stop"
+sudo service emonhub stop
+echo ""
+echo "sudo service emonhub force-reload"
+sudo service emonhub force-reload
+echo ""
+echo "sudo service emonhub status"
+sudo service emonhub status
+echo ""
+echo "sudo ps -ef | grep emonhub"
+sudo ps -ef | grep emonhub
