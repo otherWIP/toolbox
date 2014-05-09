@@ -6,7 +6,7 @@ Scripts and tools used to develop &amp; test emonhub
 
 To clone this toolbox to home dir
 
-    cd
+    cd ~/
     sudo git clone https://github.com/otherWIP/test-emonhub.git 
     
 Then to install emonhub
