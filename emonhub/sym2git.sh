@@ -18,7 +18,7 @@ sudo mkdir -p /etc/emonhub
 sudo rm -f /etc/emonhub/emonhub.conf
 sudo ln -s $GIT_PATH/conf/emonhub.conf /etc/emonhub/emonhub.conf
 CONF_PATH=/boot
-sudo ln -s $GIT_PATH/conf/emonhub.conf $CONF_PATH/emonhub.conf 
+sudo ln -s $CONF_PATH/emonhub.conf $GIT_PATH/conf/emonhub.conf
 
 ### link default locations file
 sudo rm -f /etc/default/emonhub
