@@ -14,11 +14,11 @@ git clone https://github.com/pb66/emonhub.git
 
 
 ### create folder and link for settings file (probally not used)
-#mkdir -p /etc/emonhub
-#sudo rm -f /etc/emonhub/emonhub.conf
-#sudo ln -s $GIT_PATH/conf/emonhub.conf /etc/emonhub/emonhub.conf
+sudo mkdir -p /etc/emonhub
+sudo rm -f /etc/emonhub/emonhub.conf
+sudo ln -s $GIT_PATH/conf/emonhub.conf /etc/emonhub/emonhub.conf
 CONF_PATH=/boot
-sudo ln -s $CONF_PATH/emonhub.conf /etc/emonhub/emonhub.conf
+sudo ln -s $GIT_PATH/conf/emonhub.conf $CONF_PATH/emonhub.conf 
 
 ### link default locations file
 sudo rm -f /etc/default/emonhub
