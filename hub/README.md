@@ -1,6 +1,6 @@
 --------------------
     
-To clone emonHub and symlink all files (except emonhub.conf, commented out)
+To just clone emonHub and symlink all files (except emonhub.conf, commented out)
 
     ~/toolbox/hub/sym2git.sh
 
