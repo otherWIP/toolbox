@@ -2,22 +2,22 @@
     
 To clone emonHub and symlink all files (except emonhub.conf, commented out)
 
-    ~/toolbox/emonhub/sym2git.sh
+    ~/toolbox/hub/sym2git.sh
 
 ----------------------
     
 To install emonHub in a way that mimics apt-get install
     
-    ~/toolbox/emonhub/install.sh
+    ~/toolbox/hub/install.sh
 
 -----------------------
 
 To uninstall emonhub
 
-    ~/toolbox/emonhub/uninstall.sh
+    ~/toolbox/hub/uninstall.sh
     
 -------------------------------    
     
 To test the start stop restart reload status deamon messages
 
-    ~/toolbox/emonhub/daemon-test.sh
+    ~/toolbox/hub/daemon-test.sh
