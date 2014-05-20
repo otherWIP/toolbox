@@ -19,5 +19,9 @@ git clone https://github.com/pb66/emoncms.git
 
 
 
+# install dependencies
+sudo apt-get install apache2 libapache2-mod-php5 php5 php5-mysql php5-curl php5-dev php5-mcrypt libphp-swiftmailer mysql-server mysql-client ufw ntp
+
+
 DATA_PATH=/media/data/emondata
 DATA_PATH=/var/lib
