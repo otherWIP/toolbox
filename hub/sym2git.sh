@@ -2,19 +2,18 @@
 ### set location to install emonhub.py etc
 INST_PATH=/usr/share/emonhub
 
-### set log file loction
-LOG_PATH=/var/log
-
 ### set git cloned location
 GIT_PATH=/home/pi/emonhub
 
 ### set private emonhub.conf location
 CONF_PATH=/home/pi
 
+### set log file loction
+LOG_PATH=/var/log
+
 ### clone emonhub
 git clone https://github.com/pb66/emonhub.git
 #git clone https://github.com/emonhub/emonhub.git
-
 
 ### create folder and link for settings file
 sudo mkdir -p /etc/emonhub
