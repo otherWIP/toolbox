@@ -24,6 +24,10 @@ sudo rm -r -f $INST_PATH
 sudo mkdir -p $INST_PATH
 sudo ln -s $GIT_PATH $INST_PATH/www
 
+#copy settings.php and link
+sudo ln -s $CONF_PATH/settings.php $GIT_PATH
+
+
 # Create the required feed directories and set ownership
 DATA_PATH=/data/cms
 sudo mkdir -p $DATA_PATH/phpfina
