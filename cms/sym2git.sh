@@ -42,7 +42,7 @@ sudo chown www-data:root /var/lib/phpfina/
 sudo chown www-data:root /var/lib/phpfiwa/
 sudo chown www-data:root /var/lib/phptimeseries/
 sudo chown www-data:root /var/lib/timestore/
-
+sudo chown root:root /var/lib/mysql/
 
 
 
