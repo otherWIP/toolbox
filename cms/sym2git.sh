@@ -49,6 +49,10 @@ sudo chown root:root /var/lib/mysql/
 # install dependencies
 sudo apt-get install apache2 libapache2-mod-php5 php5 php5-mysql php5-curl php5-dev php5-mcrypt libphp-swiftmailer mysql-server mysql-client ufw ntp
 
+# add emonhub "sites-available" via link
+sudo ln -s $CONF_PATH/apache2/emoncms /etc/apache2/sites-available/
+
+
 if [ -f /var/lib/timestore/adminkey.txt ]
 then
   read -r TS_ADMIN_KEY < /var/lib/timestore/adminkey.txt
