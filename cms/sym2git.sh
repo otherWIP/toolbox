@@ -52,6 +52,9 @@ sudo apt-get install apache2 libapache2-mod-php5 php5 php5-mysql php5-curl php5-
 # add emonhub "sites-available" via link
 sudo ln -s $CONF_PATH/apache2/emoncms /etc/apache2/sites-available/
 
+mysql -u root -p
+mysql> CREATE DATABASE emoncms;
+mysql> exit
 
 if [ -f /var/lib/timestore/adminkey.txt ]
 then
