@@ -24,8 +24,6 @@ sudo rm -r -f $INST_PATH
 sudo mkdir -p $INST_PATH
 sudo ln -s $GIT_PATH $INST_PATH/www
 
-#link
-
 # Create the required feed directories and set ownership
 DATA_PATH=/data/cms
 sudo mkdir -p $DATA_PATH/phpfina
@@ -44,11 +42,14 @@ sudo chown www-data:root /var/lib/phptimeseries/
 sudo chown www-data:root /var/lib/timestore/
 sudo chown root:root /var/lib/mysql/
 
-
-
 # install dependencies
 sudo apt-get install apache2 libapache2-mod-php5 php5 php5-mysql php5-curl php5-dev php5-mcrypt libphp-swiftmailer mysql-server mysql-client ufw ntp
 
+# Create the MySQL db (if it doesn't already exist).
+echo "Attempting to create '$DATABASE' mysql database (with the '$DB_USER' user)..."
+mysql -u$DB_USER -p$DB_PASSWORD -e "CREATE DATABASE IF NOT EXISTS $DATABASE;" || { echo ' - Failed (check username and password are correct, using dpkg-reconfigure. Check grants allow table creation, etc...)' ; exit 1; }
 
-DATA_PATH=/media/data/emondata
-DATA_PATH=/var/lib
+# Didn't exit 1? Then DB creation worked OK.
+echo " - '$DATABASE' either exists already or was created successfully."
+
+
