@@ -1,6 +1,6 @@
 --------------------
     
-To just clone emonHub and symlink all files (except emonhub.conf, commented out, expects to find a copy in /boot)
+To just clone emonHub and symlink all files (except emonhub.conf, commented out, expects to find a copy in homedir)
 
     nano ~/emonhub.conf
     ~/toolbox/hub/sym2git.sh
