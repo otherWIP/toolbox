@@ -1,6 +1,6 @@
 #!/bin/sh
 ### set location to install emonCMS files etc
-INST_PATH=/usr/share/emoncms
+INST_PATH=/usr/share/emoncms/www
 
 ### set git cloned location
 GIT_PATH=/home/pi/emoncms
