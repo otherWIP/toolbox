@@ -33,14 +33,9 @@ sudo ln -s $GIT_PATH/conf/default/emonhub /etc/default/emonhub
 sudo rm -f /etc/init.d/emonhub
 sudo ln -s $GIT_PATH/service/emonhub /etc/init.d/emonhub
 
-### create directory for emonhub.py etc
+### create linked directory for emonhub.py etc
 sudo rm -r -f $INST_PATH
-sudo mkdir -p $INST_PATH
-sudo ln -s $GIT_PATH/src/emonhub.py $INST_PATH/emonhub.py
-sudo ln -s $GIT_PATH/src/emonhub_buffer.py $INST_PATH/emonhub_buffer.py
-sudo ln -s $GIT_PATH/src/emonhub_dispatcher.py $INST_PATH/emonhub_dispatcher.py
-sudo ln -s $GIT_PATH/src/emonhub_interface.py $INST_PATH/emonhub_interface.py
-sudo ln -s $GIT_PATH/src/emonhub_listener.py $INST_PATH/emonhub_listener.py
+sudo ln -s $GIT_PATH/src $INST_PATH
 
 ### launch at start-ip
 sudo update-rc.d emonhub defaults 99
