@@ -1,6 +1,6 @@
 #!/bin/sh
 ### set location to install emonCMS files etc
-INST_PATH=/usr/share/emoncms/www
+INST_PATH=/usr/share/emoncms
 
 ### set git cloned location
 GIT_PATH=/home/pi/emoncms
@@ -16,7 +16,10 @@ cd ~/
 git clone https://github.com/pb66/emoncms.git
 #git clone https://github.com/emoncms/emoncms.git
 
-
+# create linked directory for emoncms files & folders
+sudo rm -r -f $INST_PATH
+sudo mkdir -p $INST_PATH
+sudo ln -s $GIT_PATH $INST_PATH/www
 
 
 # install dependencies
