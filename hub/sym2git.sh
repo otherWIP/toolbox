@@ -16,6 +16,7 @@ git clone https://github.com/pb66/emonhub.git
 ### create folder and link for settings file (probally not used)
 sudo mkdir -p /etc/emonhub
 sudo rm -f /etc/emonhub/emonhub.conf
+sudo mv $GIT_PATH/conf/emonhub.conf $GIT_PATH/conf/emonhub.conf.default
 sudo ln -s $GIT_PATH/conf/emonhub.conf /etc/emonhub/emonhub.conf
 CONF_PATH=/boot
 sudo ln -s $CONF_PATH/emonhub.conf $GIT_PATH/conf/emonhub.conf
