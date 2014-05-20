@@ -71,6 +71,6 @@ mysql -u$DB_USER -p$DB_PASSWORD -e "CREATE DATABASE IF NOT EXISTS $DATABASE;" ||
 # Didn't exit 1? Then DB creation worked OK.
 echo " - '$DATABASE' either exists already or was created successfully."
 
-
+sudo a2ensite emoncms
 sudo a2enmod rewrite
 sudo /etc/init.d/apache2 restart
