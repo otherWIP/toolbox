@@ -6,7 +6,7 @@ INST_PATH=/usr/share/emoncms
 GIT_PATH=/home/pi/emoncms
 
 ### set private emoncms.conf location
-CONF_PATH=/home/pi
+CONF_PATH=/home/pi/conf
 
 ### set data loction
 DATA_PATH=/data/cms
@@ -45,6 +45,14 @@ sudo chown root:root /var/lib/mysql/
 # install dependencies
 sudo apt-get install apache2 libapache2-mod-php5 php5 php5-mysql php5-curl php5-dev php5-mcrypt libphp-swiftmailer mysql-server mysql-client ufw ntp
 
+if [ -f /var/lib/timestore/adminkey.txt ]
+then
+  read -r TS_ADMIN_KEY < /var/lib/timestore/adminkey.txt
+  perl -pi -e "s{_TS_ADMINKEY_}{$TS_ADMIN_KEY}" /usr/share/emoncms/www/settings.php
+  echo " - Copied timestore key from /var/lib/timestore/adminkey.txt into emoncms config"
+fi
+
+
 # Create the MySQL db (if it doesn't already exist).
 echo "Attempting to create '$DATABASE' mysql database (with the '$DB_USER' user)..."
 mysql -u$DB_USER -p$DB_PASSWORD -e "CREATE DATABASE IF NOT EXISTS $DATABASE;" || { echo ' - Failed (check username and password are correct, using dpkg-reconfigure. Check grants allow table creation, etc...)' ; exit 1; }
@@ -53,3 +61,5 @@ mysql -u$DB_USER -p$DB_PASSWORD -e "CREATE DATABASE IF NOT EXISTS $DATABASE;" ||
 echo " - '$DATABASE' either exists already or was created successfully."
 
 
+sudo a2enmod rewrite
+sudo /etc/init.d/apache2 restart
