@@ -6,7 +6,7 @@ INST_PATH=/usr/share/emonhub
 GIT_PATH=/home/pi/emonhub
 
 ### set private emonhub.conf location
-CONF_PATH=/home/pi/conf/emonhub
+CONF_PATH=/home/pi/conf
 
 ### set log file loction
 LOG_PATH=/var/log
